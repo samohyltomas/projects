@@ -1,0 +1,58 @@
+{layout '../layout.latte'}
+{block content}
+<!DOCTYPE html>
+<html lang="en-CZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        .jumbotron {
+    background-image: url('img/php.jfif');/* Průhledné černé pozadí pro nadpis */
+    color: #fff; /* Bílý text v nadpisu */
+        }
+        
+        .skill-bar {
+            background-color: #f1f1f1;
+            border-radius: 25px;
+            margin: 10px 0;
+        }
+        .skill {
+            height: 25px;
+            border-radius: 25px;
+            text-align: center;
+            line-height: 25px;
+            color: white;
+        }
+    </style>
+</head>
+<body class="body">
+
+
+
+
+    <div class="jumbotron text-center">
+        <h1>Welcome to My Portfolio</h1>
+        <p>Explore my website and learn more about my skills and experience.</p>
+    </div>
+
+    <center><h2>My Skills</h2></center>
+    <div class="row">
+        {foreach $skills as $skill}
+        <div class="col-md-6">
+            <div class="skill-bar">
+                <div class="skill bg-info animate__animated animate__fadeInLeft" style="width: {$skill->percentage}%; animation-duration: 2s;">
+                    {$skill->name} - {$skill->percentage}%
+                </div>
+            </div>
+        </div>
+        {/foreach}
+    </div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+{/block}
+

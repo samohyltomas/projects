@@ -1,0 +1,9 @@
+services:
+    - App\Core\RouterFactory::createRouter
+    - App\Model\SkillManager
+
+search:
+	-	in: %appDir%
+		classes:
+			- *Factory
+			- *Facade

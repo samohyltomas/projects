@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en-CZ">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" sizes="16x16"  href="/my-portfolio/www/img/favicon-16x16.png">
+    <link rel="stylesheet" href="/my-portfolio/www/css/style.css" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+	<title>{ifset title}{include title|stripHtml} | {/ifset}My Portfolio</title>
+</head>
+
+<body>
+	<div n:foreach="$flashes as $flash" n:class="flash, $flash->type">{$flash->message}</div>
+    <!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+    <a class="nav-link" href="{link Home:default}">Home</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{link About:about}">About</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{link Contact:contact}">Contact</a>
+</li>
+    </ul>
+</div>
+
+</nav>
+
+	{include content}
+
+	{block scripts}
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></script>
+        <script src="https://unpkg.com/nette-forms@3/src/assets/netteForms.js"></script>
+	{/block}
+    
+<div id="cookieConsent">
+  <div id="cookieConsentContainer">
+    <div id="cookieMessage">This website uses cookies to provide you with the best possible experience. <a id="cookieLink" href="privacy-policy.html">More Informations</a></div>
+    <div id="cookieButton" onclick="acceptCookies()">Consent</div>
+  </div>
+</div>
+<script>
+      function acceptCookies() {
+        document.cookie = "cookiesAccepted=true; path=/; max-age=" + 60*60*24*365; // Platnost cookie 1 rok
+        document.getElementById('cookieConsent').style.display = 'none';
+      }
+
+      function checkCookie() {
+        const cookieArr = document.cookie.split(";");
+
+        for(let i = 0; i < cookieArr.length; i++) {
+          const cookiePair = cookieArr[i].split("=");
+
+          if("cookiesAccepted" === cookiePair[0].trim()) {
+            return true;
+          }
+        }
+
+        return false;
+      }
+
+      document.addEventListener('DOMContentLoaded', (event) => {
+        if (!checkCookie()) {
+          document.getElementById('cookieConsent').style.display = 'block';
+        }
+      });
+</script>
+<footer class="footer">
+        <p>&copy; 2024 Tomáš Samohýl. All rights reserved.</p>
+    </footer>
+    
+
+</body>
+</html>

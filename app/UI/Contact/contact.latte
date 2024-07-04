@@ -1,0 +1,86 @@
+{layout '../layout.latte'}
+{block content}
+
+<!DOCTYPE html>
+<html lang="en-CZ">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+<style>
+.end {
+      min-height: 100vh;
+      margin: 0;
+      background-image: url('/my-portfolio/www/img/city.gif');
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: #fff;
+}
+.hidden {
+    display: none;
+}
+.contact-icons {
+        display: flex; /* Nastavení na flexbox kontejner */
+        justify-content: center; /* Zarovnání obsahu na střed */
+}
+
+.icon {
+        margin: 0 10px; /* Odsazení mezi ikonami (nastavte podle potřeby) */
+}
+
+</style>
+
+
+
+
+</head>
+<body class="end">
+<center><h1>Thanks for studying my portfolio!</h1></center>
+<center><h2>If you like what you see and are thinks about employe me. I'll be very happy to join your team.</h2></center>
+<br><br>
+<center><h2>Click the links below to contact me:</h2></center>
+<br><br>
+
+<center><div class="contact-icons">
+        <div class="icon"><a href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-samoh%C3%BDl-b983ab315/" target="_blank">
+            <img src="/my-portfolio/www/img/linkedinicon.png" alt="LinkedIn" style="width: 40px; height: 40px;">
+        </a></div>
+        <div class="icon"><a href="https://www.facebook.com/profile.php?id=100087392041252&locale=cs_CZ" target="_blank">
+            <img src="/my-portfolio/www/img/fbicon.png" alt="Facebook" style="width: 40px; height: 40px;">
+        </a></div>
+        <div class="icon"><a href="https://www.instagram.com/tomassamohyl/" target="_blank">
+            <img src="/my-portfolio/www/img/instagramicon.png" alt="Instagram" style="width: 40px; height: 40px;">
+        </a></div>
+        <div class="icon"><a href="#" class="phone-link">
+            <img src="/my-portfolio/www/img/phoneicon.png" alt="Phone" style="width: 40px; height: 40px;">
+        </a></div>
+        <div class="icon"><a href="https://wa.me/735946357" target="_blank">
+            <img src="/my-portfolio/www/img/whatsappicon.png" alt="WhatsApp" style="width: 40px; height: 40px;">
+        </a></div>
+        <div class="icon"><a href="mailto:tomassamohyl31102000@seznam.cz">
+            <img src="/my-portfolio/www/img/emailicon.png" alt="Email" style="width: 40px; height: 40px;">
+        </a></div>
+    </div></center>
+    
+    <div class="contact-info hidden">
+        <br><center><p>Phone: (+420)735 946 357</p></center><br>
+        <br><center><p>Email: tomassamohyl31102000@seznam.cz</p></center><br>
+    </div>
+    
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="/my-portfolio/www/js/script.js"></script>
+
+
+</body>
+</html>
+{/block}

@@ -1,0 +1,73 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Minimální výška těla na celou výšku okna pro zarovnání footru */
+    margin: 0;
+    font-family: Arial, sans-serif; /* Vaše preferovaná písma */
+    background-image: url('/my-portfolio/www/img/homebg.jpg'); /* Tmavé pozadí pro futuristický vzhled */
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff; /* Bílá barva pro text */
+}
+
+.content {
+    flex: 1; /* Roztáhne obsah na zbývající dostupnou výšku */
+    padding: 20px; /* Vnější padding kolem obsahu, upravte podle potřeby */
+}
+
+.footer {
+    width: 100%; /* Zajistí, že footer zabere celou šířku stránky */
+    background-color: #333; /* Tmavá barva pro footer */
+    color: #fff; /* Bílá barva pro text ve footeru */
+    text-align: center; /* Zarovnání textu ve středu */
+    padding: 10px 0; /* Vnitřní padding pro odsazení obsahu ve footeru */
+    position: absolute; /* Absolutní pozice, aby se footer umístil na spodek stránky */
+    bottom: 0; /* Zarovná footer úplně na spodek */
+}
+
+#cookieConsent {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  z-index: 1000;
+  display: none;
+}
+
+#cookieConsentContainer {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#cookieMessage {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+#cookieLink {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+#cookieButton {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+#cookieButton:hover {
+  background-color: #45a049;
+}
+
+
+
+

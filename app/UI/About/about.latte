@@ -1,0 +1,97 @@
+{layout '../layout.latte'}
+{block content}
+
+<!DOCTYPE html>
+<html lang="en-CZ">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+<style>
+.about {
+    min-height: 100vh;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    color: red;
+    background-image: url('/my-portfolio/www/img/bg.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.top {
+            width: 600px; /* Šířka */
+            height: 300px; /* Výška */
+            padding: 20px; /* Vnitřní odsazení */
+            background-image: url('/my-portfolio/www/img/border.png'); /* Obrázek pozadí pro rodičovský div */
+            background-size: cover; /* Velikost obrázku */
+            color: white; /* Barva textu */
+            text-align: center; /* Zarovnání textu na střed */
+            margin: 0 auto; /* Centered */
+        }
+
+.top-content {
+            background-color: transparent; /* Světle modré pozadí pro vnořený div */
+            color: red; /* Červená barva textu */
+            padding: 15px;
+            margin-top: 20px; /* Odsazení od nadřazeného divu */
+            border-radius: 10px; /* Zaoblené rohy */
+            height: 100%; /* Výška 100% pro zaplnění rodičovského divu */
+            box-sizing: border-box; /* Včetně padding do celkové výšky */
+        }
+
+.top-content p {
+            margin: 0; /* Odstranění marginu odstavce pro lepší vzhled textu */
+        }
+.about-content {
+    position: relative;
+    text-align: center;
+}
+
+.CV {
+    position: fixed;
+    top: 400px; /* Upravte podle potřeby */
+    right: 20px;/* Upravte podle potřeby */
+    bottom: 50px;
+    width: 300px;
+    height: 400px;
+    background-image: url('/my-portfolio/www/img/CV1.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    }
+.download {
+position: fixed;
+top: 360px;
+right: 130px;
+}
+    
+
+.download-link {
+    display: block;
+    margin-top: 10px;
+    color: red;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.download-link:hover {
+    color: red;
+}
+    </style>
+</head>
+<body class="about">
+    <center><h1>A few words about me</h1></center>
+    <center><div class="top">
+        <div class="top-content">
+            <p>Here I will say a few words about me. Some people think that PHP is already outdated, I am not one of them. I am a young programmer working on creating websites, web applications and designs in PHP, of course I know that I still have a lot to learn, I have about a year of experience with PHP and my advantage is that I have a photographic memory, so I learn quickly. I really like programming, because it seems that only here I can be my own master and determine which direction my path will lead. I think of programming as computer games and I enjoy them.</p>
+        </div>
+    </div></center>
+<div class="CV"></div>
+
+    <!-- Odkaz na stažení životopisu -->
+    <div class="download"><a href="/my-portfolio/www/files/CV.pdf" download="Tomas-Samohyl-CV.pdf" class="download-link">Download CV</a>
+ </div>
+
+
+</body>
+</html>
+{/block}
